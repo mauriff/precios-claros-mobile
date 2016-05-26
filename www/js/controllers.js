@@ -22,8 +22,10 @@ $scope.show($ionicLoading);
 		$scope.hide($ionicLoading);
 
 	}, function errorCallback(response) {
-		alert("error");
 		$scope.hide($ionicLoading);
+	   alert("Error occurred! \n Status: " + response.status + 
+	   "\n data: " + response.data+ "\n statusText: " + response.statusText +
+	   "\n url: " + 'https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/productos?string='+$scope.buscar.nombre+'&lat=-31.42008329999999&lng=-64.18877609999998&offset=0&limit=10');
 	});
 	};
 	
@@ -64,8 +66,8 @@ $scope.show($ionicLoading);
 		$scope.hide($ionicLoading);
 
 	}, function errorCallback(response) {
-		alert("error");
 		$scope.hide($ionicLoading);
+									alert("Error occurred! \n Status: " + response.status + "\n data: " + response.data+ "\n statusText: " + response.statusText );
 	});
 
 	$scope.hide($ionicLoading);
