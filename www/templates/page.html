@@ -1,0 +1,32 @@
+<ion-view title="Busca precios! Por Mauri ;)" id="page1" class=" ">
+    <ion-content padding="true" class="has-header">
+        <h1 id="page-heading2" style="color:#000000;" class=" ">Precios Claros</h1>
+        <ion-list id="page-list1" class=" ">
+            <ion-item class="item-divider " id="page-list-item-divider1">Buscar productos</ion-item>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input ng-model="buscar.nombre" "type="search" placeholder="Producto">
+            </label>
+            <label class="item item-select " id="page-select1">
+                <span class="input-label">Ubicacion</span>
+                <select>
+                    <option>Cordoba</option>
+                    <option>Resto del país</option>
+                </select>
+            </label>
+        </ion-list>
+        <button ng-click="getClima()" id="page-button1" class=" button button-positive  button-block ">Buscar</button>
+        <ion-item class="item-divider">Productos</ion-item>
+				<div ng-repeat="producto in productos">
+            <ion-item class="item-thumbnail-left">
+
+				<img alt="{{producto.nombre}}" class="img-rounded" ng-src="https://imagenes.preciosclaros.gob.ar/productos/{{producto.id}}.jpg" fallback-src="https://preciosclaros.gob.ar/img/no-image.png" src="https://imagenes.preciosclaros.gob.ar/productos/{{producto.id}}.jpg">
+                <h2>{{producto.marca}} - {{producto.nombre}}</h2>
+                <p>Maximo: {{producto.precioMax}} </p>
+				 <p>Minimo: {{producto.precioMin}} </p>
+				  <a href="#/page2" class="button button-block">Ver comercios</a>
+				 
+            </ion-item>
+			</div>
+    </ion-content>
+</ion-view>

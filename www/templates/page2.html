@@ -1,0 +1,16 @@
+<ion-view title="Comercios" id="page2" class=" ">
+ <ion-content padding="true" class="has-header">
+   
+        <ion-item class="item-divider">Comercios</ion-item>
+				<div ng-repeat="sucursal in sucursales">
+            <ion-item class="item-thumbnail-left">
+				<img alt="sucursal.banderaDescripcion" ng-src="https://imagenes.preciosclaros.gob.ar/comercios/{{sucursal.comercioId}}-{{sucursal.banderaId}}.jpg" fallback-src="/img/comercio-no-image.png" src="https://imagenes.preciosclaros.gob.ar/comercios/{{sucursal.comercioId}}-{{sucursal.banderaId}}.jpg">
+				
+                <h2>{{sucursal.direccion}} </h2>
+                <p>{{sucursal.comercioRazonSocial}} </p>
+				 <p>Precio: ${{sucursal.preciosProducto.precioLista}} </p>
+				 
+            </ion-item>
+			</div>
+    </ion-content>
+</ion-view>
